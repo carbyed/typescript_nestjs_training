@@ -1,0 +1,12 @@
+services:
+  dev-db:
+    image: mariadb:latest
+    ports:
+      - "3306:3306"
+    networks:
+      - training
+    env_file:
+      - .env
+
+networks:
+  training:
